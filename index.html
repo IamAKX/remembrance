@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="scripts/main_script.js"></script>
+    <style>
+      #memory_board {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .tile {
+        box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+        transition: 0.3s;
+
+        background-color: rgb(68, 68, 68);
+        border-radius: 5px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .tile:hover {
+        box-shadow: 0 32px 64px 0 rgb(0, 0, 0, 0.2);
+      }
+
+      body {
+        padding: 0% 20%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <br />
+    <center><h2>MEMORY GAME</h2></center>
+
+    <div style="float: left; word-wrap: break-word; width: 400px">
+      <h4>Instruction</h4>
+      <ol>
+        <li>Look at the position of the ball carefully.</li>
+        <li>
+          Once you have memorized the positions, click on one of the ball.
+        </li>
+        <li>
+          Now the game has begun! Click on the position where you think you saw
+          the balls.
+        </li>
+        <li>
+          Your aim is to make streak by clicking on the correct position of
+          ball. As and when your level increases, the count of the ball will
+          increase.
+        </li>
+        <li><b>Go and challenge your memory! Good luck..</b></li>
+      </ol>
+    </div>
+    <div style="float: right">
+      <h4>Guess the position of white dots</h4>
+      <h5 id="level_count"></h5>
+      <div>
+        <table id="memory_board">
+          <script>
+            initBoard();
+          </script>
+        </table>
+      </div>
+      <br />
+      <br />
+      <button onclick="refresh()">Refresh</button>
+    </div>
+  </body>
+</html>
